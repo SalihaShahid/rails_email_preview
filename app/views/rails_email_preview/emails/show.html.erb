@@ -6,7 +6,7 @@
         <%= with_show_hook :breadcrumb_content do %>
           <li class="rep--breadcrumbs__breadcrumb">
             <a href="<%= rails_email_preview.rep_emails_path(email_locale: @email_locale) %>"><%= t '.breadcrumb_list' %></a>
-          </li><li class="rep--breadcrumbs__breadcrumb-active"><a href="<%= request.path %>"><%= @preview.name %></a></li>
+          </li><li class="rep--breadcrumbs__breadcrumb-active"><a href="<%= request.fullpath %>"><%= @preview.name %></a></li>
         <% end %>
       </ol>
     <% end %>
